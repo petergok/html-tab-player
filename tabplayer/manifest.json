@@ -12,10 +12,15 @@
   "browser_action": {
     "default_icon": "img/note-bkg.png"
   },
+  "background": {
+    "scripts": ["tabplayer-apply.js"]
+  },
+  "web_accessible_resources": ["sounds/*"],
   "content_scripts": [
     {
       "matches": ["http://tabs.ultimate-guitar.com/*", "https://tabs.ultimate-guitar.com/*"],
-      "js": ["js/jquery.min.js", "tabplayer-apply.js", "js/tabplayer.js"]
+      "css": ["css/tabplayer.css"],
+      "js": ["js/jquery.min.js"]
     }
   ]
 }

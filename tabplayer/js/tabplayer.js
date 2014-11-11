@@ -17,7 +17,7 @@
                 var audio = $('<audio>')
                             .attr({
                                 id: 'note' + noteName,
-                                src: 'tabplayer/sounds/' + noteName + '.ogg',
+                                src: chrome.extension.getURL('/sounds/' + noteName + '.ogg'),
                                 preload: 'auto'
                             });
                 $('body').append(audio);

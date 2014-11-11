@@ -1,5 +1,5 @@
 var $pre = $('pre:last');
 
-$pre.setAttribute('lang', 'tabplayer');
-$pre.setAttribute('tuning', 'EADGBE');
-$pre.setAttribute('bartime', '2500');
+$pre.attr('lang', 'tabplayer');
+$pre.attr('tuning', 'EADGBE');
+$pre.attr('bartime', '2500');
