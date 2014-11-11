@@ -113,7 +113,8 @@
             var me = this;
             var aPlay = $('<a>')
                 .addClass('playerButton')
-                .addClass('play')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')')
+                .css('background-position', '-4px -4px')
                 .click(function () {
                     me.play();
                 });
@@ -124,7 +125,7 @@
             var aPause = $('<a>')
             .addClass('disabled')
             .addClass('playerButton')
-            .addClass('pause')
+            .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')' + ' -36px -4px;')
             .click(function () {
                 me.pause();
             });
@@ -133,7 +134,7 @@
             var aStop = $('<a>')
              .addClass('disabled')
             .addClass('playerButton')
-            .addClass('stop')
+            .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')' + ' -4px 92px;')
             .click(function () {
                 me.stop();
             });
@@ -141,7 +142,7 @@
 
             var aSettings = $('<a>')
             .addClass('playerButton')
-            .addClass('settings')
+            .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')' + ' -36 60px;')
             .click(function () {
                 me.settings();
             });

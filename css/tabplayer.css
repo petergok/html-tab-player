@@ -68,11 +68,6 @@ a.playerButton img {
     text-decoration: none;
 }
 
-a.playerButton.play img { background: url('../img/sprites.png') -4px -4px; }
-a.playerButton.pause img { background: url('../img/sprites.png') -36px -4px; }
-a.playerButton.stop img { background: url('../img/sprites.png') -4px 92px; }
-a.playerButton.settings img { background: url('../img/sprites.png') -36px 60px; }
-
 a.playerButton.play.disabled img { background: url('../img/sprites_gray.png') -4px -4px; }
 a.playerButton.pause.disabled img { background: url('../img/sprites_gray.png') -36px -4px; }
 a.playerButton.stop.disabled img { background: url('../img/sprites_gray.png') -4px 92px; }

@@ -15,7 +15,7 @@
   "background": {
     "scripts": ["tabplayer-apply.js"]
   },
-  "web_accessible_resources": ["sounds/*"],
+  "web_accessible_resources": ["sounds/*", "img/sprites.png"],
   "content_scripts": [
     {
       "matches": ["http://tabs.ultimate-guitar.com/*", "https://tabs.ultimate-guitar.com/*"],
