@@ -1,0 +1,90 @@
+﻿pre[lang=tabplayer] {
+    font-size: 13px;
+    font-family: monospace;
+}
+
+pre[lang=tabplayer].minimize {
+    display: none;
+}
+
+pre[lang=tabplayer].window {
+    height: 10pc; 
+    overflow-y: scroll;
+}
+
+pre[lang=tabplayer] span.note {
+    color: blue;
+    background-color: transparent;
+}
+
+pre span.played::before {
+    content: '   ';
+    font-weight: bold;
+    z-index: -1;
+    background-image: url('../img/note-bkg.png');
+    background-repeat: no-repeat;
+    color: black;
+}
+
+pre span.played.onedigit::before {
+    margin: 0 -17px 0 -16px;
+    background-position-x: 8px;
+    padding: 4px 6px 6px 6px;
+}
+
+pre span.played.twodigits::before {
+    margin: 0 -18px 0 -15px;
+    background-position-x: 11px;
+    padding: 4px 6px 6px 6px;
+}
+
+div.tabPlayerControls {
+    margin-bottom: -13px;
+    width: 100%;
+    /*font-size: 11px;*/
+    background-color: #e0e0e0;
+    font-family: monospace;
+}
+
+div.tabPlayerControls span {
+    margin: 0 6px 0 6px;
+}
+
+div.tabPlayerControls select {
+    font-family: monospace;
+    margin-top: 3px;
+}
+
+div.tabPlayerControls select #ddlTempo {
+    /*font-size: 11px;*/
+    width: 400px;
+}
+
+a.playerButton img {
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.playerButton.play img { background: url('../img/sprites.png') -4px -4px; }
+a.playerButton.pause img { background: url('../img/sprites.png') -36px -4px; }
+a.playerButton.stop img { background: url('../img/sprites.png') -4px 92px; }
+a.playerButton.settings img { background: url('../img/sprites.png') -36px 60px; }
+
+a.playerButton.play.disabled img { background: url('../img/sprites_gray.png') -4px -4px; }
+a.playerButton.pause.disabled img { background: url('../img/sprites_gray.png') -36px -4px; }
+a.playerButton.stop.disabled img { background: url('../img/sprites_gray.png') -4px 92px; }
+
+a.playerButton.minimize,
+a.playerButton.window,
+a.playerButton.maximize { float: right; }
+
+a.playerButton.minimize img { background: url('../img/sprites.png') -100px 92px; }
+a.playerButton.window img { background: url('../img/sprites.png') -68px 92px; }
+a.playerButton.maximize img { background: url('../img/sprites.png') -100px -4px; }
+
+a img { border:none; vertical-align:top; }
+
+div.barTime, div.tuning { display: inline; }
