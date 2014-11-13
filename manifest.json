@@ -20,7 +20,7 @@
     {
       "matches": ["http://tabs.ultimate-guitar.com/*", "https://tabs.ultimate-guitar.com/*"],
       "css": ["css/tabplayer.css"],
-      "js": ["js/jquery.min.js"]
+      "js": ["js/jquery.min.js", "js/contents-script.js"]
     }
   ]
 }

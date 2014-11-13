@@ -39,7 +39,9 @@ pre span.played.twodigits::before {
 }
 
 div.tabPlayerControls {
+    display: block;
     width: 100%;
+    height: 24px; 
     /*font-size: 11px;*/
     background-color: #e0e0e0;
     font-family: monospace;
@@ -62,14 +64,22 @@ div.tabPlayerControls select #ddlTempo {
 a.playerButton img {
     background-repeat: no-repeat;
     width: 24px;
-    height: 35px;
+    height: 24px;
     cursor: pointer;
     text-decoration: none;
+    display: inline-block;
 }
 
 a.playerButton {
-    height: 100%;
     display: inline-block;
+    position: relative;
+}
+
+a.playerButton.play,
+a.playerButton.pause,
+a.playerButton.stop,
+a.playerButton.settings {
+    top: -15px;
 }
 
 a.playerButton.minimize,
@@ -78,4 +88,8 @@ a.playerButton.maximize { float: right; }
 
 a img { border:none; vertical-align:top; }
 
-div.barTime, div.tuning { display: inline; }
+div.barTime, div.tuning { 
+    display: inline-block;
+    height: 24px;
+    margin-left: 5px; 
+}
