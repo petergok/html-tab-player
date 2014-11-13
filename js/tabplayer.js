@@ -113,8 +113,8 @@
             var me = this;
             var aPlay = $('<a>')
                 .addClass('playerButton')
-                .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')')
-                .css('background-position', '-4px -4px')
+                .addClass('play')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ') -4px -4px')
                 .click(function () {
                     me.play();
                 });
@@ -123,53 +123,59 @@
             $(aPlay).append(imgPlay);
 
             var aPause = $('<a>')
-            .addClass('disabled')
-            .addClass('playerButton')
-            .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')' + ' -36px -4px;')
-            .click(function () {
-                me.pause();
-            });
+                .addClass('disabled')
+                .addClass('playerButton')
+                .addClass('pause')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites_gray.png') + ') -36px -4px')
+                .click(function () {
+                    me.pause();
+                });
             $(aPause).append($('<img>'));
             
             var aStop = $('<a>')
-             .addClass('disabled')
-            .addClass('playerButton')
-            .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')' + ' -4px 92px;')
-            .click(function () {
-                me.stop();
-            });
+                .addClass('disabled')
+                .addClass('playerButton')
+                .addClass('stop')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites_gray.png') + ') -4px 92px')
+                .click(function () {
+                    me.stop();
+                });
             $(aStop).append($('<img>'));
 
             var aSettings = $('<a>')
-            .addClass('playerButton')
-            .css('background', 'url(' + chrome.extension.getURL('img/sprites.js') + ')' + ' -36 60px;')
-            .click(function () {
-                me.settings();
-            });
+                .addClass('playerButton')
+                .addClass('settings')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ') -36px 60px')
+                .click(function () {
+                    me.settings();
+                });
             $(aSettings).append($('<img>'));
 
             var aPreMinimize = $('<a>')
-            .addClass('playerButton')
-            .addClass('minimize')
-            .click(function () {
-                me.resizeToMinimize();
-            });
+                .addClass('playerButton')
+                .addClass('minimize')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ') -100px 92px')
+                .click(function () {
+                    me.resizeToMinimize();
+                });
             $(aPreMinimize).append($('<img>'));
 
             var aPreWindow = $('<a>')
-            .addClass('playerButton')
-            .addClass('window')
-            .click(function () {
-                me.resizeToWindow();
-            });
+                .addClass('playerButton')
+                .addClass('window')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ') -68px 92px')
+                .click(function () {
+                    me.resizeToWindow();
+                });
             $(aPreWindow).append($('<img>'));
 
             var aPreMaximize = $('<a>')
-            .addClass('playerButton')
-            .addClass('maximize')
-            .click(function () {
-                me.resizeToMaximize();
-            });
+                .addClass('playerButton')
+                .addClass('maximize')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ') -100px -4px')
+                .click(function () {
+                    me.resizeToMaximize();
+                });
             $(aPreMaximize).append($('<img>'));
 
             var lblTempo = $('<span>').append('Bar duration (ms)');
@@ -490,29 +496,37 @@
         enablePlayButton: function () {
             var me = this;
             var playerControls = $('div.tabPlayerControls[tabPlayerId=' + me.tabPlayerId + ']');
-            $(playerControls).find('.playerButton.play').removeClass('disabled');
-            $(playerControls).find('.playerButton.pause').addClass('disabled');
-            $(playerControls).find('.playerButton.stop').addClass('disabled');
+            $(playerControls).find('.playerButton.play').removeClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ')');
+            $(playerControls).find('.playerButton.pause').addClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites_gray.png') + ')');
+            $(playerControls).find('.playerButton.stop').addClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites_gray.png') + ')');
         },
 
         enablePauseButton: function () {
             var me = this;
             var playerControls = $('div.tabPlayerControls[tabPlayerId=' + me.tabPlayerId + ']');
-            $(playerControls).find('.playerButton.play').addClass('disabled');
-            $(playerControls).find('.playerButton.pause').removeClass('disabled');
-            $(playerControls).find('.playerButton.stop').removeClass('disabled');
+            $(playerControls).find('.playerButton.play').addClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites_gray.png') + ')');
+            $(playerControls).find('.playerButton.pause').removeClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ')');
+            $(playerControls).find('.playerButton.stop').removeClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ')');
         },
 
         enableStopButton: function () {
             var me = this;
             var playerControls = $('div.tabPlayerControls[tabPlayerId=' + me.tabPlayerId + ']');
-            $(playerControls).find('.playerButton.stop').removeClass('disabled');
+            $(playerControls).find('.playerButton.stop').removeClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites.png') + ')');
         },
 
         disableStopButton: function () {
             var me = this;
             var playerControls = $('div.tabPlayerControls[tabPlayerId=' + me.tabPlayerId + ']');
-            $(playerControls).find('.playerButton.stop').addClass('disabled');
+            $(playerControls).find('.playerButton.stop').addClass('disabled')
+                .css('background', 'url(' + chrome.extension.getURL('img/sprites_gray.png') + ')');
         },
 
         resizeToMinimize: function () {
