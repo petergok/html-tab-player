@@ -21,7 +21,6 @@ pre span.played::before {
     content: '   ';
     font-weight: bold;
     z-index: -1;
-    background-image: url('../img/note-bkg.png');
     background-repeat: no-repeat;
     color: black;
 }
